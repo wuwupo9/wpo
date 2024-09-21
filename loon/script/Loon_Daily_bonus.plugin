@@ -6,6 +6,14 @@
 
 
 [Script]
+cron "0 8 * * *" script-path=https://raw.githubusercontent.com/wuwupo9/wpo/master/loon/script/sf.js, img-url=https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Sfsy.png, timeout=300, enabled=false, tag=顺丰速运 [签到]
+
+
+cron "40 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/tieba.png, timeout=300, enabled=false, tag=百度贴吧 [签到]
+
+http-request ^https?:\/\/(c\.tieba|tiebac)\.baidu\.com\/c\/s\/login script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/tieba.png, enabled=false, tag=百度贴吧 [Cookie]
+
+
 cron "30 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Ctrip-DailyBonus/Ctrip.js, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/ctrip.png, timeout=300, enabled=false, tag=携程旅行 [签到]
 
 http-response ^https:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/[a-zA-Z]+Login(?:$|\?) script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Ctrip-DailyBonus/Ctrip.js, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/ctrip.png, requires-body=true, enabled=false, tag=携程旅行 [Cookie]
@@ -21,11 +29,6 @@ cron "0 9 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/mas
 http-request ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/manga.png, enabled=false, tag=哔哩漫画 [Cookie]
 
 
-cron "40 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/tieba.png, timeout=300, enabled=false, tag=百度贴吧 [签到]
-
-http-request ^https?:\/\/(c\.tieba|tiebac)\.baidu\.com\/c\/s\/login script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/tieba.png, enabled=false, tag=百度贴吧 [Cookie]
-
-
 cron "10 9 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/KuaiKan.png, timeout=300, enabled=false, tag=快看漫画 [签到]
 
 http-request ^https?:\/\/api\.kkmh\.com\/v\d\/passport\/user script-path=https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/KuaiKan.png, enabled=false, tag=快看漫画 [Cookie]
@@ -34,9 +37,5 @@ http-request ^https?:\/\/api\.kkmh\.com\/v\d\/passport\/user script-path=https:/
 cron "20 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutDailyBonus.js, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/bahamutGame.png, timeout=300, enabled=false, tag=巴哈姆特 [签到]
 
 
-cron "20 8 * * *" script-path=https://raw.githubusercontent.com/wuwupo9/wpo/master/loon/script/sf.js, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/bahamutGame.png, timeout=300, enabled=false, tag=顺丰速运 [签到]
-
-
-
 [MITM]
-hostname = passport.iqiyi.com, app.bilibili.com, c.tieba.baidu.com, tiebac.baidu.com, api.kkmh.com, m.ctrip.com
+hostname = passport.iqiyi.com, app.bilibili.com, c.tieba.baidu.com, tiebac.baidu.com, api.kkmh.com, m.ctrip.com,mcs-mimp-web.sf-express.com
