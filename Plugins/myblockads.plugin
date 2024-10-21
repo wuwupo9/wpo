@@ -349,8 +349,8 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 
 [Script]
 # 12306 //ad.12306.cn, mobile.12306.cn
-http-request ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/12306.js, requires-body = true, tag = 12306_splash
-http-response ^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/header.js, tag = 12306_appin
+http-request ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$ script-path = https://raw.githubusercontent.com/wuwupo9/wpo/raw/Scripts/12306.js, requires-body = true, tag = 12306_splash
+http-response ^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$ script-path = https://raw.githubusercontent.com/wuwupo9/wpo/raw/Scripts/header.js, tag = 12306_appin
 
 # 阿里云盘 //*api.alipan.com, member.alipan.com
 http-response ^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(?:news|widgets) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/adrive.js, requires-body = true, tag = aliyun_mine
